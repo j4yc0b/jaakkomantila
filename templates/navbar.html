@@ -3,8 +3,9 @@
   <!-- Header Section -->
   <header class="header">
     <div class="container container--narrow">
-      <a href="{% url 'profiles' %}" class="header__logo">
-        <img style="max-width: 400px;" src="{% static 'images/jm_logo.jpg' %}" alt="DevSearch Logo" />
+      <a href="{% url 'projects' %}" class="header__logo">
+        <h2>Jaakko Mantila</h2>
+        <span>Data Engineer</span>
       </a>
       <nav class="header__nav">
         <input type="checkbox" id="responsive-menu" />
@@ -13,12 +14,10 @@
           <div class="toggle-menu__lines"></div>
         </label>
         <ul class="header__menu">
-          <li class="header__menuItem"><a href="{% url 'profiles' %}">Developers</a></li>
-          <li class="header__menuItem"><a href="{% url 'projects' %}">Projects</a></li>
-          <li class="header__menuItem"><a href="">Inbox</a></li>
-          <li class="header__menuItem"><a href="{% url 'create-project' %}" class="btn btn--sub">Add Project</a></li>
-          <li class="header__menuItem"><a href="" class="btn btn--sub">Delete Project</a></li>
-          <li class="header__menuItem"><a href="" class="btn btn--sub">Login/Sign Up</a></li>
+          <li><a title="Github" href="#" target="_blank"><i class="im im-github"></i></a></li>
+          <li><a title="LinkedIn" href="#" target="_blank"><i class="im im-linkedin"></i></a></li>
+          <li class="header__menuItem"><a href="" class="btn btn--sub">Projects</a></li>
+          <li class="header__menuItem"><a href="{% url 'aboutme' %}" class="btn btn--sub">About me</a></li>
         </ul>
       </nav>
     </div>
