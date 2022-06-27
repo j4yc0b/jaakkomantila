@@ -15,6 +15,15 @@ def project(request,pk):
 
 def aboutme(request):
     projects = Project.objects.all()
-    context = {'aboutme':aboutme}
+    context = {'projects':projects}
     return render(request,'projects/aboutme.html', context)
 
+def user_profile(request, pk):
+    projects = Project.objects.all()
+
+    # top_skills = projects.skill_set.exclude(title__exact="")
+    skills = projects.skill_set.filter(title="Example3")
+
+    context = {'projects': projects, 'skills': skills}
+
+    return render(request,'projects/aboutme.html',context)

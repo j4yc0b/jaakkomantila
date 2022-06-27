@@ -19,3 +19,4 @@ def user_profile(request, pk):
 def skill(request, pk):
     skillObj= Skill.objects.get(id=pk)
     return render(request,'users/profile.html',{'skill':skillObj})
+

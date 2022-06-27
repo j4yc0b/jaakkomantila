@@ -5,7 +5,6 @@ from django.db.models.fields import NullBooleanField
 from users.models import Profile
 
 # Create your models here.
-
 class Project(models.Model):
 
     # field_types = ['CharField', 'TextField', 'IntegerField', 'DateTimeField', 'UUIDField',
@@ -13,8 +12,9 @@ class Project(models.Model):
 
     owner = models.ForeignKey(Profile, null=True, blank=True, on_delete=models.SET_NULL)
     title = models.CharField(max_length=200)
-
     description = models.TextField(null=True, blank=True)
+    short_intro = models.CharField(max_length=200, null=True, blank=True)
+    location = models.CharField(max_length=200, null=True, blank=True)
     featured_image = models.ImageField(
         null=True, blank=True, default="default_dude.png")
 
@@ -30,6 +30,8 @@ class Project(models.Model):
     #modified = models.DateTimeField(auto_now_add=True)
     id = models.UUIDField(default=uuid.uuid4, unique=True,
                             primary_key=True, editable=False)
+
+    skill = models.CharField(max_length=200, null=True, blank=True)
 
     def __str__(self):
         return self.title
