@@ -30,8 +30,8 @@ class Profile(models.Model):
 
 
     # might cause issues
-    # def __str__(self):
-    #     return str(self.user.username())
+    def __str__(self):
+        return str(self.user)
 
 
 class Skill(models.Model):
