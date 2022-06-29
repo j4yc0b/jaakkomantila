@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Profile
-from .models import Skill
+# from .models import Skill
 
 def profiles(request):
     profiles = Profile.objects.all()
