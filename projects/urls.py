@@ -6,6 +6,6 @@ urlpatterns = [
     
     path('project/<str:pk>/', views.project, name="project"),
     
-    path('aboutme/', views.aboutme, name="aboutme"),
+    # path('aboutme/', views.aboutme, name="aboutme"),
 ]
 

@@ -23,8 +23,8 @@
         <div class="column column--1of3">
           <div class="card text-center">
             <div class="card__body dev">
-            <img class="project__thumbnail" src={{info.featured_image.url}} alt="project thumbnail" />
-              <h2 class="dev__name">{{info.owner}}</h2>
+            <img class="project__thumbnail" src={{info.profile_image.url}} alt="project thumbnail" />
+              <h2 class="dev__name">{{info.user}}</h2>
               <p class="dev__title">{{info.short_intro}}</p>
               <p class="dev__location">{{info.location}}</p>
 
@@ -49,14 +49,14 @@
           <div class="devInfo">
             <h3 class="devInfo__title">About Me</h3>
                 <div class="myinfotext">
-                        {{info.description}}
+                        {{info.bio}}
                 </div>
           </div>
               <h3 class="devInfo__subtitle">Skills</h3>
               <div class="devInfo__otherSkills">
-                {% for tag in info.tags.all %}
+                {% for skill in skills %}
                 <span class="tag tag--pill tag--sub tag--lg">
-                  <small>{{tag}}</small>
+                  <small>{{skill}}</small>
                 </span>
                 {% endfor %}
               </div>

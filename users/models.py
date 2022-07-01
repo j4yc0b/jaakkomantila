@@ -1,17 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
 import uuid
-# Create your models here.
 
 
 class Profile(models.Model):
-
-    # field_names = ['name', 'email', 'short_intro', 'bio', 'profile_image', 'social_github']
-    # field_types = ['CharField', 'EmailField', 'CharField', 'TextField', 'ImageField', 'CharField']
-
-    # field_tuple = list(zip(field_names,field_types))
-    # for field, field_type in field_tuple:
-    #     field = models.field_type(max_length=200, null=True, blank=True)
 
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
     name = models.CharField(max_length=200, null=True, blank=True)
@@ -27,11 +19,10 @@ class Profile(models.Model):
     id = models.UUIDField(default=uuid.uuid4, unique=True,
                             primary_key=True, editable=False)
 
+    # skills = models.ManyToManyField('Skill', blank=True)
 
-
-    # might cause issues
-    # def __str__(self):
-    #     return str(self.user.username())
+    def __str__(self):
+        return str(self.user)
 
 
 class Skill(models.Model):
