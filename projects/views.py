@@ -11,13 +11,7 @@ def projects(request):
 
 def project(request,pk):
     project_obj = Project.objects.get(id=pk)
-                                                        #the name used in the template == 'project'
     return render(request,'projects/single-project.html',{'project':project_obj})
-
-# def aboutme(request):
-#     project_obj = Project.objects.get(title='Example3')
-#     context = {'info':project_obj}
-#     return render(request,'projects/aboutme.html', context)
 
 # def user_profile(request, pk):
 #     projects = Project.objects.all()

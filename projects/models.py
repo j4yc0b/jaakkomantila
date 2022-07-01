@@ -4,11 +4,7 @@ import uuid
 from django.db.models.fields import NullBooleanField
 from users.models import Profile
 
-# Create your models here.
 class Project(models.Model):
-
-    # field_types = ['CharField', 'TextField', 'IntegerField', 'DateTimeField', 'UUIDField',
-    #  'ManyToManyField', 'ImageField', 'ForeignKey']
 
     owner = models.ForeignKey(Profile, null=True, blank=True, on_delete=models.SET_NULL)
     title = models.CharField(max_length=200)
