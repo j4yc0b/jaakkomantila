@@ -23,10 +23,6 @@
                 <div class="card__body">
                   <h3 class="project__title">{{project.title}}</h3>
                   <p><a class="project__author" href="{% url 'project' project.id %}">{{project.owner.name}}</a></p>
-                  <p class="project--rating">
-                    <span style="font-weight: bold;">{{project.vote_ratio}}</span> Positive
-                    Feedback ({{project.vote_total}} Votes)
-                  </p>
                   <div class="project__tags">
                       {% for tag in project.tags.all %}
                     <span class="tag tag--pill tag--main">
