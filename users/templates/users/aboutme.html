@@ -50,7 +50,7 @@
           </div>
               <h3 class="devInfo__subtitle">Skills</h3>
               <div class="devInfo__skills">
-                {% for skill in skills %}
+                {% for skill in info.skills.all %}
                 <span class="tag tag--pill tag--sub tag--lg">
                   <small>{{skill.name}}</small>
                 </span>
