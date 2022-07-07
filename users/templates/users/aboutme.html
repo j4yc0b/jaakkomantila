@@ -49,10 +49,10 @@
                 </div>
           </div>
               <h3 class="devInfo__subtitle">Skills</h3>
-              <div class="devInfo__otherSkills">
+              <div class="devInfo__skills">
                 {% for skill in skills %}
                 <span class="tag tag--pill tag--sub tag--lg">
-                  <small>{{skill}}</small>
+                  <small>{{skill.name}}</small>
                 </span>
                 {% endfor %}
               </div>
