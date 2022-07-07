@@ -2,19 +2,6 @@
 
 
 {% block content %}
-
-<!-- </main>
-    </div>
-        <h2 class="singleProject__title">About me</h2>
-        {% for x in projects %}    
-            {% if x.title == "Example3" %} 
-                <div class="myinfotext">
-                        {{x.description}}
-                </div>
-            {% endif %}
-        {% endfor %}
-        </div>
-</main> -->
       
   <!-- Main Section -->
   <main class="profile my-md">
@@ -24,7 +11,7 @@
           <div class="card text-center">
             <div class="card__body dev">
             <img class="project__thumbnail" src={{info.profile_image.url}} alt="project thumbnail" />
-              <h2 class="dev__name">{{info.user}}</h2>
+              <h2 class="dev__name">{{info.name}}</h2>
               <p class="dev__title">{{info.short_intro}}</p>
               <p class="dev__location">{{info.location}}</p>
 
@@ -34,6 +21,13 @@
                 </li>
                 <li>
                   <li><a title="LinkedIn" href={{info.social_linkedin}} target="_blank"><i class="im im-linkedin"></i></a></li>
+                </li>
+                <li>
+                  <li><a title="Creddly" href={{info.social_creddly}} target="_blank"><i class="im im-certificate-o"></i></a></li>
+                </li>
+                <li>
+                  <li><a title="LinkedIn" href={{info.social_upwork}} target="_blank"></a></li>
+                  <img class="avatar avatar--xl" src="images/upwork.png" />
                 </li>
               </ul>
               <a href="#" class="btn btn--sub btn--lg">Send Message </a>
@@ -45,7 +39,7 @@
           <div class="devInfo">
             <h3 class="devInfo__title">About Me</h3>
                 <div class="myinfotext">
-                        {{info.bio}}
+                    {{ info.bio|linebreaks }}
                 </div>
           </div>
               <h3 class="devInfo__subtitle">Skills</h3>

@@ -16,6 +16,8 @@ class Profile(models.Model):
         null=True, blank=True, upload_to='profiles/', default='profiles/default_dude.png')
     social_github = models.CharField(max_length=200, null=True, blank=True)
     social_linkedin = models.CharField(max_length=200, null=True, blank=True)
+    social_upwork = models.CharField(max_length=200, null=True, blank=True)
+    social_creddly = models.CharField(max_length=200, null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True)
     id = models.UUIDField(default=uuid.uuid4, unique=True,
                             primary_key=True, editable=False)
