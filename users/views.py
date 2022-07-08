@@ -15,11 +15,6 @@ def aboutme(request):
     context = {'info':project_obj}
     return render(request,'users/aboutme.html', context)
 
-def navbar(request):
-    project_obj = Profile.objects.get(name='Jaakko Mantila')
-    context = {'navbar':project_obj}
-    return render(request,'navbar.html', context)
-
 def skills(request):
     skillObj = Skill.objects.all()
     context = {'skills':skillObj}
