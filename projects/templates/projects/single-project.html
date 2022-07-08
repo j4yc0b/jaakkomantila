@@ -33,17 +33,16 @@
           <h2 class="singleProject__title">{{project.title}}</h2>
           <h3 class="singleProject__subtitle">About the Project</h3>
           <div class="singleProject__info">
-            {{project.description}}
+            <h5>{{project.description|linebreaks}}</h5>
           </div>
-            <form class="form" action="#" method="POST">
-              <!-- Textarea -->
+            <!-- <form class="form" action="#" method="POST">
               <div class="form__field">
                 <label for="formInput#textarea">Comments: </label>
                 <textarea class="input input--textarea" name="message" id="formInput#textarea"
                   placeholder="Write your comments here..."></textarea>
               </div>
               <input class="btn btn--sub btn--lg" type="submit" value="Comments" />
-            </form>
+            </form> -->
             </div>
           </div>
         </div>
