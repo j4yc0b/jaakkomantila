@@ -12,10 +12,11 @@ class Project(models.Model):
     featured_image = models.ImageField(
         null=True, blank=True, default="default_dude.png")
 
-    demo_link = models.CharField(max_length=2000, null=True, blank=True)
+    # useful_links = models.CharField(max_length=2000, null=True, blank=True)
     source_link = models.CharField(max_length=2000, null=True, blank=True)
 
     tags = models.ManyToManyField('Tag', blank=True)
+    links = models.ManyToManyField('Link', blank=True)
 
     created = models.DateTimeField(auto_now_add=True)
     #modified = models.DateTimeField(auto_now_add=True)
@@ -45,6 +46,15 @@ class Review(models.Model):
 class Tag(models.Model):
     name = models.CharField(max_length=200)
     created = models.DateTimeField(auto_now_add=True)
+    id = models.UUIDField(default=uuid.uuid4, unique=True,
+                            primary_key=True, editable=False)
+
+    def __str__(self):
+        return self.name
+
+class Link(models.Model):
+    name = models.CharField(max_length=200)
+    url = models.CharField(max_length=200)
     id = models.UUIDField(default=uuid.uuid4, unique=True,
                             primary_key=True, editable=False)
 

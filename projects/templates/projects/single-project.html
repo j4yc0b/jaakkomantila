@@ -22,8 +22,8 @@
           </a>
           {% endif %}
 
-          {% if project.demo_link %}
-          <a class="singleProject__liveLink" href="#" target="_blank"><i class="im im-external-link"></i>Live Demo
+          {% if project.links %}
+          <a class="singleProject__liveLink" href={{project.links.url}} target="_blank"><i class="im im-external-link"></i>{{project.links.name}}
           </a>
           {% endif %}
         </div>
